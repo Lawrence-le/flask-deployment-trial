@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+const apiUrl = import.meta.env.VITE_API_URL;
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -6,7 +7,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/data");
+        const response = await fetch(`${apiUrl}/api/data`);
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

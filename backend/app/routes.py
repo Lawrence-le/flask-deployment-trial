@@ -5,7 +5,7 @@ hello_bp = Blueprint('hello', __name__)
 main_bp = Blueprint('main', __name__)
 
 # Define the route for '/'
-@hello_bp.route('/')
+@hello_bp.route('/api')
 def hello_world():
     return 'Hello, World!'
 

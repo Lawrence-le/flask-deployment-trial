@@ -3,6 +3,7 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 function App() {
   const [messages, setMessages] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const url = `${apiUrl}/api/data`;

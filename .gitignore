@@ -14,7 +14,6 @@ pip-log.txt
 *.sqlite3
 *.env
 .env.*
-config.py
 
 # Logs
 *.log

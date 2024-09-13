@@ -5,9 +5,10 @@ function App() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
+    const url = `${apiUrl}/api/data`;
     const fetchData = async () => {
       try {
-        const response = await fetch(`${apiUrl}/api/data`);
+        const response = await fetch(url);
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
